@@ -55,4 +55,41 @@ function getJSONData(url){
 }
 
 const habilidad = getJSONData(ability_URL);
+const region = getJSONData(region_URL);
+
+document.getElementById('busqueda').addEventListener("click", function(){
+
+  let valor = document.getElementsByClassName('form-select')[0].value
+ 
+    switch(valor){
+
+      case '1':
+        break
+    
+      case '2':
+  
+        for (let i of habilidad.results){ 
+        document.getElementById('divability').innerhtml +=
+
+        ` <p>${i.name} </p>`
+
+        } 
+    
+        break
+      case '3':
+        for (let i of region.results){ 
+          document.getElementsByClassName("container-xl").innerhtml +=
+  
+          ` <p>${i.name} </p>`
+      }
+
+        break
+  
+    
+    }
+
+})
+
+
+
 
