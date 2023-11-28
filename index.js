@@ -27,8 +27,6 @@ function hideSpinner(){
   document.getElementById("spinner-wrapper").style.display = "none";
 }
 
-// ... (código anterior)
-
 async function getData(url) {
   try {
     const response = await fetch(url);
