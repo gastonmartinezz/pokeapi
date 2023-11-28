@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PokeAPI</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
@@ -22,9 +21,9 @@
       <section class="input-group mx-3 w-25 d-flex align-content-center">
         <select class="form-select" aria-label="Select Category">
           <option selected>Choose...</option>
-          <option value="1">Pokemon</option>
-          <option value="2">Ability</option>
-          <option value="3">Region</option>
+          <option value="1" id="pokemonButton">Pokemon</option>
+          <option value="2" id="abilityButton">Ability</option>
+          <option value="3" id="regionButton">Region</option>
         </select>
         <button class="btn btn-secondary" type="button" id="busqueda">Search</button>
       </section>
@@ -32,7 +31,7 @@
     <main class="p-3 mt-5">
       <section class="">
         <h1 class="text-center mb-5">Pokemon</h1>
-        <div class="container-xl">
+        <div class="container-xl" id="pokemonContainer">
           <div class="row gap-5">
             <div class="card col">
               <img
@@ -69,12 +68,12 @@
       </section>
       <section class="d-none">
         <h1 class="text-center">Ability</h1>
-        <div class="container-xl" id="divability">
+        <div class="container-xl" id="abilityContainer">
         </div>
       </section>
       <section class="d-none">
         <h1 class="text-center">Region</h1>
-        <div class="container-xl">
+        <div class="container-xl" id="regionContainer">
         </div>
       </section>
     </main>
@@ -84,6 +83,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="../pokeapi/src/index.js"></script>
+    <script src="index.js"></script>
+    <script src="/src/api/init.js"></script>
   </body>
 </html>
